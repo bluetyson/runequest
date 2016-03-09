@@ -1,0 +1,22 @@
+{
+  "name": "runequest",
+  "authors": [
+    "Enrique Pineda <enrique.pineda@gmail.com>"
+  ],
+  "description": "character sheet app for runequest classic",
+  "main": "character.html",
+  "moduleType": [],
+  "keywords": [
+    "runequest"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

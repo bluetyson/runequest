@@ -1,4 +1,4 @@
 body { font-family:serif; }
 label { font-size:small; margin-right:0.25em; }
-input { border:none; }
+input { border:none; border-bottom:dotted lightgray; }
 

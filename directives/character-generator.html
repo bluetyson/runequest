@@ -1,0 +1,7 @@
+<section>
+    <h2 style="display:none;">Create or Load Character</h2>
+    <label for="uuid" style="border:thin dotted lightgray;"><a href="" style="text-decoration:none;" ng-click="willSave()">+</a></label>
+    <input id="uuid" name="uuid" type="text" size="41"
+    style="text-transform:uppercase;" ng-model="character.uuid" ng-change="willLoad()">
+    <button id="saveButton" ng-click="save()">load</button><!-- changes to "save" when + clicked -->
+</section>

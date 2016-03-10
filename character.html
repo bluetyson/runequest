@@ -4,11 +4,11 @@
         <meta charset="utf-8">
         <title>RuneQuest Classic Players Character Sheet</title>
         <script src="bower_components/angular/angular.min.js"></script>
-        <script src="character.js"></script>
         <script src="directives/directives.js"></script>
         <script src="directives/basic-stats.js"></script>
         <script src="controllers/controllers.js"></script>
         <script src="services/services.js"></script>
+        <script src="character.js"></script>
         <link rel="stylesheet" type="text/css" href="character.css">
     </head>
     <body>
@@ -16,13 +16,13 @@
         <table id="sheet">
             <tr>
                 <td colspan="3">
-                    <basic-statistics />
+                    <basic-statistics></basic-statistics>
                 </td>
                 <td>
-                    <armor />
+                    <armor></armor>
                 </td>
                 <td>
-                    <hit-points />
+                    <hit-points></hit-points>
                 </td>
             </tr>
         </table>

@@ -10,13 +10,17 @@ angular.module('runequest-character.directives')
             $scope.character.dirty = false
             $scope.character.uuid = null
             $scope.button = document.getElementById('saveButton')
-            $scope.load = function() {}
-            $scope.save = function() {}
-            $scope.willLoad = function() { $scope.button.onclick = $scope.load }
-            $scope.willSave = function() {
-                $scope.button.innerText = 'save'
-                $scope.button.onclick = $scope.save
+            $scope.load = function() { alert('load') }
+            $scope.save = function() { alert('save') }
+            $scope.willLoad = function() {
+                $scope.button.innerText = 'load'
+                $scope.clickAction = $scope.load 
             }
+            $scope.willSave = function() { 
+                $scope.button.innerText = 'save'
+                $scope.clickAction = $scope.save 
+            }
+            $scope.clickAction = $scope.load
         } // controller
     } // return
 }])

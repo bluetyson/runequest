@@ -1,11 +1,11 @@
-angular.module('runequest-character.directives', [])
+angular.module('runequest-character.directives')
 .directive('characterGenerator', [ function() {
     return {
         restrict:'E',
         templateUrl:'directives/character-generator.html',
         replace:true,
         scope:{},
-        controller:function() {
+        controller:function($scope) {
             $scope.character = {}
             $scope.character.dirty = false
             $scope.character.uuid = null

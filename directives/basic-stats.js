@@ -1,4 +1,4 @@
-angular.module('runequest-character.directives', [])
+angular.module('runequest-character.directives')
 .directive('basicStatistics', [ function() {
     return {
         restrict:'E',

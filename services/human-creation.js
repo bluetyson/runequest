@@ -1,10 +1,16 @@
 angular.module('runequest-character.services')
-.factory('HumanCreation', [ '$log', 'DieRoll', function($log, DieRoll) {
+.factory('HumanCreation', [
+'$log', 
+'DieRoll', 
+function($log, DieRoll) {
     return {
         generate:function() {
+            $log.log(UUIDjs.create(4).toString())
+
             var c = {}
 
             c.characteristics = {}
+            c.uuid = UUIDjs.create(4).toString()
             c.characteristics['str'] = undefined
             c.characteristics['con'] = undefined
             c.characteristics['siz'] = undefined

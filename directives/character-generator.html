@@ -6,7 +6,8 @@
     <input id="uuid" name="uuid" type="text" size="60"
     style="text-transform:uppercase;" ng-model="character.uuid"
     ng-change="willLoad()" placeholder="Enter uuid and click Load, or click + to create a new character.">
-    <button id="saveButton" ng-click="clickAction()">load</button><!-- changes to "save" when + clicked -->
+    <button id="saveButton" ng-click="clickAction()">load</button>
+        <!-- changes to "save" when + clicked -->
     <sup><a id="version" href="" style="text-decoration:none; font-size:small;"
-    ng-class="character.dirty ? 'dirty' : 'not-dirty'">v1.0</a></sup>
+    ng-class="character.dirty ? 'dirty' : 'not-dirty'">v1</a></sup>
 </section>

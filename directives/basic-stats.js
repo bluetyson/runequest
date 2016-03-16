@@ -18,7 +18,8 @@ function($log, $rootScope, HumanCreation) {
                 var oldValue = $event.target.defaultValue
 
                 if (new RegExp(modified).test([
-                    'name', 'race', 'social', 'sex', 'age', 'nationality', 'residence'
+                    'name', 'race', 'social', 'sex', 'age', 'nationality',
+                    'residence', 'cults'
                 ]))
                     $scope.character[modified] = newValue
                 else

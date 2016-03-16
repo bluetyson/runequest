@@ -58,7 +58,8 @@
         <tr id="row-cults">
             <td colspan="7" class="info">
                 <label for="cults">CULTS</label><input id="cults" name="cults"
-                type="text" placeholder="deities worshipped, etc." size="93">
+                type="text" placeholder="deities worshipped, etc." size="93"
+                ng-blur="update($event)" ng-value="character.cults">
             </td>
         </tr>
         <tr id="row-basic-attributes">

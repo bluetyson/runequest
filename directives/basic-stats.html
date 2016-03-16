@@ -26,8 +26,9 @@
         </tr>
         <tr id="row-social">
             <td colspan="5">
-                <label for="social">SOCIAL CLASS</label><input id="social"
-                name="social" type="text" size="55">
+                <label for="social">SOCIAL CLASS</label>
+                <input id="social" name="social" type="text" size="55"
+                ng-value="character.socialClass" ng-blur="update($event)">
             </td>
             <td>
                 <label for="sex">SEX</label>

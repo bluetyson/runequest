@@ -17,7 +17,7 @@ function($log, $rootScope, HumanCreation) {
                 var newValue = $event.target.value
                 var oldValue = $event.target.defaultValue
 
-                if ('race' === modified)
+                if ('race' === modified || 'social' === modified)
                     $scope.character.race = newValue
                 else
                     characteristics[modified] = newValue 

@@ -45,12 +45,14 @@
         </tr>
         <tr id="row-wherefrom">
             <td colspan="4">
-                <label for="nationality">NATIONALITY</label><input id="nationality"
-                name="nationality" type="text" size="30">
+                <label for="nationality">NATIONALITY</label>
+                <input id="nationality" name="nationality" type="text" size="30"
+                ng-blur="update($event)" ng-value="character.nationality">
             </td>
             <td colspan="3">
-                <label for="residence">RESIDENCE</label><input id="residence" name="residence"
-                type="text" size="30">
+                <label for="residence">RESIDENCE</label>
+                <input id="residence" name="residence" type="text" size="30"
+                ng-blur="update($event)" ng-value="character.residence">
             </td>
         </tr>
         <tr id="row-cults">

@@ -1,5 +1,8 @@
 angular.module('runequest-character.directives')
-.directive('characterGenerator', [ function() {
+.directive('characterGenerator', [ 
+'$log', 
+'HumanCreation', 
+function($log, HumanCreation) {
     return {
         restrict:'E',
         templateUrl:'directives/character-generator.html',
@@ -18,9 +21,18 @@ angular.module('runequest-character.directives')
             }
             $scope.willSave = function() { 
                 $scope.button.innerText = 'save'
-                $scope.clickAction = $scope.save 
+                $scope.clickAction = $scope.save
+                
+                var c = HumanCreation.generate()
+
+                $log.log('dirty = ', c.dirty)
+                $scope.populateSheet(c)
             }
             $scope.clickAction = $scope.load
+            $scope.populateSheet = function(data) {
+                $scope.character = data
+                if ($scope.save === $scope.clickAction) $scope.dirty = true
+            }
         } // controller
     } // return
 }])

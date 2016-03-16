@@ -11,6 +11,7 @@ function($log, DieRoll) {
 
             c.characteristics = {}
             c.uuid = UUIDjs.create(4).toString()
+            c.name = ''
             c.characteristics['str'] = undefined
             c.characteristics['con'] = undefined
             c.characteristics['siz'] = undefined

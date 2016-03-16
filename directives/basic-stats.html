@@ -5,8 +5,9 @@
         <tbody>
         <tr id="row-name-race">
             <td colspan="5">
-                <label for="name">NAME</label><input id="name" name="name"
-                type="text" size="65">
+                <label for="name">NAME</label>
+                <input id="name" name="name" type="text" size="65"
+                ng-value="character.name" ng-blur="update($event)">
             </td>
             <td colspan="2">
                 <label for="race">RACE</label><input id="race" name="race"

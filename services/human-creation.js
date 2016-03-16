@@ -1,11 +1,10 @@
 angular.module('runequest-character.services')
 .factory('HumanCreation', [ '$log', 'DieRoll', function($log, DieRoll) {
     return {
-        generated:undefined,
         generate:function() {
             var c = {}
 
-            c.characteristics = []
+            c.characteristics = {}
             c.characteristics['str'] = undefined
             c.characteristics['con'] = undefined
             c.characteristics['siz'] = undefined
@@ -21,7 +20,8 @@ angular.module('runequest-character.services')
                 c.characteristics[attr] = pool.reduce(function(a, b) { return a + b }, 0)
                 $log.debug(pool, c.characteristics[attr])
             }
-            return this.generated = c
+            $log.debug('generated', c)
+            return c
         }
     } // return
 }])

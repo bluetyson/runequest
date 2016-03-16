@@ -17,13 +17,19 @@ function($log, $rootScope, HumanCreation) {
                 var newValue = $event.target.value
                 var oldValue = $event.target.defaultValue
 
-                characteristics[modified] = newValue 
+                if ('race' === modified)
+                    $scope.character.race = newValue
+                else
+                    characteristics[modified] = newValue 
                 if (!$event.target.validity.valid) {
                     $log.debug('old value', oldValue)
                     document.getElementById(modified).value = oldValue
                     characteristics[modified] = oldValue
                 }
                 $log.debug('character', $scope.character, $event)
+            } // update
+            $scope.chooseGenerator = function($event) {
+                $log.debug('selected race', $event.target.value)
             }
         } // controller
     } // return

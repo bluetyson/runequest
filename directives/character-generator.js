@@ -24,7 +24,7 @@ function($log, $rootScope, HumanCreation) {
                 $scope.button.innerText = 'save'
                 $scope.clickAction = $scope.save
                 
-                var c = HumanCreation.generate()
+                var c = $scope.generator.generate()
 
                 $rootScope.character = c
                 $log.debug('$rootScope', $rootScope)
@@ -35,6 +35,31 @@ function($log, $rootScope, HumanCreation) {
                 $scope.character = data
                 if ($scope.save === $scope.clickAction) $scope.dirty = true
             }
+            $scope.generator = HumanCreation
+            $scope.chooseGenerator = function(race) {
+                var generator = HumanCreation
+
+                $log.debug('selected race', race)
+
+                switch (race.toLowerCase()) {
+                    case 'human':
+                        generator = HumanCreation
+                        break;
+                    case 'dwarf':
+                    case 'mostali':
+                        break;
+                    case 'elf':
+                    case' aldryami':
+                        break;
+                    case 'dragonewt':
+                        break;
+                    case 'duck':
+                        break;
+                    case 'troll':
+                        break;
+                } // switch
+                return $scope.generator = generator
+            } // chooseGenerator
         } // controller
     } // return
 }])

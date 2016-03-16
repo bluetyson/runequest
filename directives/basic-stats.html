@@ -48,25 +48,49 @@
         </tr>
         <tr id="row-basic-attributes">
             <td>
-                <label for="str">STR</label><input id="str" name="str" type="number" min="3" max="18">
+                <label for="str">STR</label>
+                <input id="str" name="str" type="number" min="3" max="18"
+                ng-value="character.characteristics.str"
+                ng-blur="update($event)">
             </td>
             <td>
-                <label for="con">CON</label><input id="con" name="con" type="number" min="3" max="18">
+                <label for="con">CON</label>
+                <input id="con" name="con" type="number" min="3" max="18"
+                ng-value="character.characteristics.con"
+                ng-blur="update($event)">
             </td>
             <td>
-                <label for="siz">SIZ</label><input id="siz" name="siz" type="number" min="3" max="18">
+                <label for="siz">SIZ</label>
+                <input id="siz" name="siz" type="number" min="3" max="18"
+                ng-value="character.characteristics.siz"
+                ng-blur="update($event)">
             </td>
             <td>
-                <label for="int">INT</label><input id="int" name="int" type="number" min="3" max="18">
+                <label for="int">INT</label>
+                <input id="int" name="int" type="number" min="3" max="18"
+                ng-value="character.characteristics.int"
+                ng-blur="update($event)">
+
             </td>
             <td>
-                <label for="pow">POW</label><input id="pow" name="pow" type="number" min="3" max="18">
+                <label for="pow">POW</label>
+                <input id="pow" name="pow" type="number" min="3" max="18"
+                ng-value="character.characteristics.pow"
+                ng-blur="update($event)">
+
             </td>
             <td>
-                <label for="dex">DEX</label><input id="dex" name="dex" type="number" min="3" max="18">
+                <label for="dex">DEX</label>
+                <input id="dex" name="dex" type="number" min="3" max="18"
+                ng-value="character.characteristics.dex"
+                ng-blur="update($event)">
+
             </td>
             <td>
-                <label for="cha">CHA</label><input id="cha" name="cha" type="number" min="3" max="18">
+                <label for="cha">CHA</label>
+                <input id="cha" name="cha" type="number" min="3" max="18"
+                ng-value="character.characteristics.cha"
+                ng-blur="update($event)">
             </td>
         </tr>
         </tbody>

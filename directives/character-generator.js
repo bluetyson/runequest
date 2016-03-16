@@ -1,13 +1,14 @@
 angular.module('runequest-character.directives')
 .directive('characterGenerator', [ 
-'$log', 
+'$log',
+'$rootScope',
 'HumanCreation', 
-function($log, HumanCreation) {
+function($log, $rootScope, HumanCreation) {
     return {
         restrict:'E',
         templateUrl:'directives/character-generator.html',
         replace:true,
-        scope:{},
+        scope:{ character:'=' },
         controller:function($scope) {
             $scope.character = {}
             $scope.character.dirty = false
@@ -25,7 +26,8 @@ function($log, HumanCreation) {
                 
                 var c = HumanCreation.generate()
 
-                $log.log('dirty = ', c.dirty)
+                $rootScope.character = c
+                $log.debug('$rootScope', $rootScope)
                 $scope.populateSheet(c)
             }
             $scope.clickAction = $scope.load

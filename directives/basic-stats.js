@@ -1,11 +1,30 @@
 angular.module('runequest-character.directives')
-.directive('basicStatistics', [ function() {
+.directive('basicStatistics', [ 
+'$log',
+'$rootScope',
+'HumanCreation', 
+function($log, $rootScope, HumanCreation) {
     return {
         restrict:'E',
         templateUrl:'directives/basic-stats.html',
         replace:true,
-        scope:{},
-        controller:function() {
+        scope:{ character:'=' },
+        controller:function($scope) {
+            $log.debug('character', $scope.character)
+            $scope.update = function($event) {
+                var characteristics = $scope.character.characteristics
+                var modified = $event.target.id
+                var newValue = $event.target.value
+                var oldValue = $event.target.defaultValue
+
+                characteristics[modified] = newValue 
+                if (!$event.target.validity.valid) {
+                    $log.debug('old value', oldValue)
+                    document.getElementById(modified).value = oldValue
+                    characteristics[modified] = oldValue
+                }
+                $log.debug('character', $scope.character, $event)
+            }
         } // controller
     } // return
 }])

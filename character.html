@@ -17,11 +17,11 @@
     </head>
     <body ng-app="runequest-character">
         <h1>Runequest Classic Players Character Sheet</h1>
-        <character-generator></character-generator>
+        <character-generator character="$rootScope.character"></character-generator>
         <table id="sheet">
             <tr>
                 <td colspan="3">
-                    <basic-statistics></basic-statistics>
+                    <basic-statistics character="$rootScope.character"></basic-statistics>
                 </td>
                 <td>
                     <armor></armor>

@@ -32,7 +32,7 @@
             </td>
             <td>
                 <label for="sex">SEX</label>
-                <select id="sex" name="sex">
+                <select id="sex" name="sex" ng-blur="update($event)">
                     <option value="male">M</option>
                     <option value="female">F</option>
                 </select>
